@@ -10,7 +10,7 @@
         "research-reporting"
       ],
       "schedule": "0 8 * * *",
-      "deliver": "local",
+      "deliver": "telegram,local",
       "continuity": false,
       "workdir": null
     },
@@ -22,7 +22,7 @@
         "competitive-intelligence"
       ],
       "schedule": "0 9 1 * *",
-      "deliver": "local",
+      "deliver": "telegram,local",
       "continuity": false,
       "workdir": null
     },
@@ -35,7 +35,7 @@
         "research-reporting"
       ],
       "schedule": "0 9 2 * *",
-      "deliver": "local",
+      "deliver": "telegram,local",
       "continuity": false,
       "workdir": null
     },
@@ -48,7 +48,7 @@
         "research-reporting"
       ],
       "schedule": "0 9 * * 1",
-      "deliver": "local",
+      "deliver": "telegram,local",
       "continuity": false,
       "workdir": null
     },
@@ -60,7 +60,7 @@
         "opportunity-scoring"
       ],
       "schedule": "0 9 * * 4",
-      "deliver": "local",
+      "deliver": "telegram,local",
       "continuity": false,
       "workdir": null
     }

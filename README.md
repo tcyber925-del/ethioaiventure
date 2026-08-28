@@ -47,7 +47,7 @@ The 5 jobs are defined in `cron/README.md` with exact `hermes cron create` comma
 | monthly-market | 0 9 1 * * | Monthly market review with trend classification |
 | monthly-strategy | 0 9 2 * * | Monthly strategic review incl. "What We Were Wrong About" |
 
-All jobs use `--continuity` (native dedup against previous runs) and `--deliver local` (archive + local delivery; add a Telegram/Slack token to `.env` and swap `--deliver telegram` for channel delivery).
+All jobs use `--continuity` (native dedup against previous runs) and deliver to **Telegram** + local (`--deliver telegram,local`): add a `TELEGRAM_BOT_TOKEN` + `TELEGRAM_HOME_CHANNEL` to `.env`, restart the gateway, and reports land in your Telegram home channel with a local copy archived too.
 
 Enable the gateway for scheduled fires:
 

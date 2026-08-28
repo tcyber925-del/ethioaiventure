@@ -1,6 +1,6 @@
 name: ethioaiventure
-version: 1.0.0
-description: "Ethiopian & African AI venture intelligence agent — ecosystem research, startup validation, opportunity scoring, and scheduled intelligence reports."
+version: 1.0.1
+description: "Ethiopian & African AI venture intelligence agent — ecosystem research, startup validation, opportunity scoring, and scheduled intelligence reports (Telegram delivery)."
 hermes_requires: ">=0.20.0"
 author: "tcyber925-del"
 license: "MIT"

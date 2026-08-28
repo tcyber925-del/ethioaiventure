@@ -10,7 +10,7 @@ ethioaiventure gateway install    # required: gateway daemon runs the scheduler
 ethioaiventure cron list          # verify
 ```
 
-`setup-jobs.sh` contains the exact prompts, skills, schedules, `--continuity` (dedup against previous runs) and `--deliver local`. Edit it first if you want different cadences or delivery targets.
+`setup-jobs.sh` contains the exact prompts, skills, schedules, `--continuity` (dedup against previous runs) and `--deliver telegram,local`. Edit it first if you want different cadences or delivery targets.
 
 ## The jobs
 
@@ -41,7 +41,18 @@ ethioaiventure cron status
 
 ## Delivery channels
 
-`--deliver local` is the default. To add a channel (Telegram/Slack/etc.), put the bot token in the profile's `.env` and change `--deliver telegram` (or `telegram:<chat_id>`) on the jobs.
+The jobs deliver to **Telegram** (home channel) **and** save a local copy per run (`--deliver telegram,local`). Setup:
+
+1. Add to the profile's `.env`:
+   ```
+   TELEGRAM_BOT_TOKEN=<bot token from BotFather>
+   TELEGRAM_HOME_CHANNEL=<your chat id>
+   TELEGRAM_ALLOWED_USERS=<your user id>
+   ```
+2. Restart the gateway: `ethioaiventure gateway restart`
+3. Verify connection: `ethioaiventure gateway status` should show `telegram: connected`
+
+To use a different channel (Slack/Discord/etc.), change `--deliver` on the jobs. A local audit copy is always kept under `cron/output/`.
 
 ## Reliability notes
 
